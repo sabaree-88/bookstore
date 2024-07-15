@@ -19,7 +19,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/book", BookRouter);
 app.use("/user", UserRoute);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const ConnURI = process.env.MONGODBURI;
 
 mongoose
