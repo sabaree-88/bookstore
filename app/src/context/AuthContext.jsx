@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:3000/user/login", {
+      const res = await axios.post("https://bookstore-app-qy0h.onrender.com/user/login", {
         email,
         password,
       });
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (email, password) => {
     try {
-      const res = await axios.post("http://localhost:3000/user/signup", {
+      const res = await axios.post("https://bookstore-app-qy0h.onrender.com/user/signup", {
         email,
         password,
       });

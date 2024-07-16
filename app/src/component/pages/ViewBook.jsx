@@ -17,7 +17,7 @@ const ViewBook = () => {
     }
     const token = localStorage.getItem("token");
     axios
-      .get(`http://localhost:3000/book/${id}`, {
+      .get(`https://bookstore-app-qy0h.onrender.com/book/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -49,7 +49,7 @@ const ViewBook = () => {
           <h3 className="text-lg">{data.year}</h3>
           {data.imagePath && (
             <img
-              src={`http://localhost:3000/${data.imagePath}`}
+              src={`https://bookstore-app-qy0h.onrender.com/${data.imagePath}`}
               alt={data.title}
               className="max-w-40"
             />

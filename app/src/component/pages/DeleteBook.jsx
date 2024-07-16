@@ -17,7 +17,7 @@ const DeleteBook = () => {
     }
     const token = localStorage.getItem("token");
     axios
-      .delete(`http://localhost:3000/book/${id}`, {
+      .delete(`https://bookstore-app-qy0h.onrender.com/book/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {

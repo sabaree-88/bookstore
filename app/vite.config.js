@@ -7,12 +7,12 @@ export default defineConfig({
   server: {
     proxy: {
       '/user': {
-        target: "http://localhost:3000",
+        target: "https://bookstore-app-qy0h.onrender.com/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/user/, ''),
       },
       '/book': {
-        target: "http://localhost:3000",
+        target: "https://bookstore-app-qy0h.onrender.com/",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/book/, ''),
       },

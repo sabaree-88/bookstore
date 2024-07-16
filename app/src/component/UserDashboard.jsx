@@ -23,7 +23,7 @@ const UserDashboard = () => {
       setLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:3000/book", {
+        const res = await axios.get("https://bookstore-app-qy0h.onrender.com/book", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -63,7 +63,7 @@ const UserDashboard = () => {
                 <div className="flex justify-center items-center">
                   <div className="img w-6/12">
                     <img
-                      src={`http://localhost:3000/${item.imagePath}`}
+                      src={`https://bookstore-app-qy0h.onrender.com/${item.imagePath}`}
                       alt={item.title}
                     />
                   </div>

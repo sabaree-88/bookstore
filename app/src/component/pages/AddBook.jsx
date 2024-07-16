@@ -51,7 +51,7 @@ const AddBook = () => {
         formData.append("year", values.year);
         formData.append("image", values.image);
         const token = localStorage.getItem("token");
-        axios.post("http://localhost:3000/book", formData, {
+        axios.post("https://bookstore-app-qy0h.onrender.com/book", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,

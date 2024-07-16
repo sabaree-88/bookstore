@@ -23,7 +23,7 @@ const EditBook = () => {
     setLoading(true);
     const token = localStorage.getItem("token");
     axios
-      .get(`http://localhost:3000/book/${id}`, {
+      .get(`https://bookstore-app-qy0h.onrender.com/book/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -77,7 +77,7 @@ const EditBook = () => {
 
       const token = localStorage.getItem("token");
       axios
-        .put(`http://localhost:3000/book/${id}`, formData, {
+        .put(`https://bookstore-app-qy0h.onrender.com/book/${id}`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
